@@ -9,37 +9,45 @@ $(function () {
 	});
 });
 
-/* Check for device type */
-var detectDeviceType = function detectDeviceType() {
-	return (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ? 'Mobile' : 'Desktop'
-	);
-};
 
-/* Check if element is visible */
-var elementIsVisibleInViewport = function elementIsVisibleInViewport(el) {
-	var partiallyVisible = arguments.length <= 1 || arguments[1] === undefined ? false : arguments[1];
-	
-	var _el$getBoundingClient = el.getBoundingClientRect();
-	
-	var top = _el$getBoundingClient.top;
-	var left = _el$getBoundingClient.left;
-	var bottom = _el$getBoundingClient.bottom;
-	var right = _el$getBoundingClient.right;
-	var _window = window;
-	var innerHeight = _window.innerHeight;
-	var innerWidth = _window.innerWidth;
-	
-	return partiallyVisible ? (top > 0 && top < innerHeight || bottom > 0 && bottom < innerHeight) && (left > 0 && left < innerWidth || right > 0 && right < innerWidth) : top >= 0 && left >= 0 && bottom <= innerHeight && right <= innerWidth;
-};
 
-/* Example of GSAP Timeline lite */
-$(document).ready(function () {
-	var tl = new TimelineLite();
-	var htmlAndBody = $('html, body');
-	tl.to(htmlAndBody, .1, {overflowY: "hidden"});
-	tl.staggerFrom($('.animate'), .7, {y: -200, autoAlpha: 0}, 0.3);
-	tl.staggerFrom($('.including'), .3, {x: -400, autoAlpha: 0});
-	tl.staggerFrom($('.avatar'), 0.6, {scale: 0, autoAlpha: 0,  ease: Sine.easeOut});
-	tl.staggerFromTo($('.row.second div'), .5, {y: 400, autoAlpha: 0}, {y:0, autoAlpha: 1}, 0.3);
-	tl.to(htmlAndBody, .1, {overflowY: "auto"});
-});
+
+// Set the date we're counting down to
+var countDownDate = new Date("Apr 20, 2020 12:00:00").getTime();
+
+// Update the count down every 1 second
+var x = setInterval(function() {
+
+  // Get todays date and time
+  var now = new Date().getTime();
+
+  // Find the distance between now an the count down date
+  var distance = countDownDate - now;
+
+  // Time calculations for days, hours, minutes and seconds
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+  // Display the result in the element with id="demo"
+  document.getElementById("timer-days").innerHTML = "<h3 class='number'>" + days + "</h3>" +
+        "<span class='label'>días</span>";
+    
+        document.getElementById("timer-hours").innerHTML = "<h3 class='number'>" + ("0"+hours).slice(-2) + "</h3>" +
+        "<span class='label'>horas</span>";
+    
+        document.getElementById("timer-mins").innerHTML =  "<h3 class='number'>" + ("0"+minutes).slice(-2) + "</h3>" +
+        "<span class='label'>minutos</span>";
+    
+        document.getElementById("timer-secs").innerHTML = "<h3 class='number'>" + ("0"+seconds).slice(-2) + "</h3>" +
+        "<span class='label'>segundos</span>";
+
+
+
+  // If the count down is finished, write some text
+  if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("timer").innerHTML = "EXPIRED";
+  }
+}, 1000);

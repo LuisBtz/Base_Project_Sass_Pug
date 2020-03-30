@@ -1,20 +1,45 @@
+
 @font-face {
-  font-family: 'PFRegalTextPro-RegularA';
-  src: url('../fonts/PFRegalTextPro-RegularA.eot?#iefix') format('embedded-opentype'),  url('../fonts/PFRegalTextPro-RegularA.otf')  format('opentype'),
-	     url('../fonts/PFRegalTextPro-RegularA.woff') format('woff'), url('../fonts/PFRegalTextPro-RegularA.ttf')  format('truetype'), url('../fonts/PFRegalTextPro-RegularA.svg#PFRegalTextPro-RegularA') format('svg');
+  font-family: 'Steradian';
+  src: url('../fonts/Steradian-Regular.eot');
+  src: url('../fonts/Steradian-Regular.eot?#iefix') format('embedded-opentype'),
+      url('../fonts/Steradian-Regular.woff2') format('woff2'),
+      url('../fonts/Steradian-Regular.woff') format('woff'),
+      url('../fonts/Steradian-Regular.ttf') format('truetype'),
+      url('../fonts/Steradian-Regular.svg#Steradian-Regular') format('svg');
   font-weight: normal;
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'Steradian-M';
+  src: url('../fonts/Steradian-Medium.eot');
+  src: url('../fonts/Steradian-Medium.eot?#iefix') format('embedded-opentype'),
+      url('../fonts/Steradian-Medium.woff2') format('woff2'),
+      url('../fonts/Steradian-Medium.woff') format('woff'),
+      url('../fonts/Steradian-Medium.ttf') format('truetype'),
+      url('../fonts/Steradian-Medium.svg#Steradian-Medium') format('svg');
+  font-weight: 500;
+  font-style: normal;
+}
 
 @font-face {
-  font-family: 'PFRegalTextPro-RegularAItalic';
-  src: url('../fonts/PFRegalTextPro-RegularAItalic.eot?#iefix') format('embedded-opentype'),  url('../fonts/PFRegalTextPro-RegularAItalic.otf')  format('opentype'),
-	     url('../fonts/PFRegalTextPro-RegularAItalic.woff') format('woff'), url('../fonts/PFRegalTextPro-RegularAItalic.ttf')  format('truetype'), url('../fonts/PFRegalTextPro-RegularAItalic.svg#PFRegalTextPro-RegularAItalic') format('svg');
-  font-weight: normal;
+  font-family: 'Bitstream Cooper';
+  src: url('../fonts/CooperBT-Light.eot');
+  src: url('../fonts/CooperBT-Light.eot?#iefix') format('embedded-opentype'),
+      url('../fonts/CooperBT-Light.woff2') format('woff2'),
+      url('../fonts/CooperBT-Light.woff') format('woff'),
+      url('../fonts/CooperBT-Light.ttf') format('truetype'),
+      url('../fonts/CooperBT-Light.svg#CooperBT-Light') format('svg');
+  font-weight: 300;
   font-style: normal;
 }
 
 
-$pf-r: 'PFRegalTextPro-RegularA';
-$pf-i: 'PFRegalTextPro-RegularAItalic';
+
+
+
+
+$st: 'Steradian';
+$st-m: 'Steradian-M';
+$bc: 'Bitstream Cooper';

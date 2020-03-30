@@ -1,0 +1,179 @@
+#home
+    scroll-snap-type: y mandatory
+    scroll-behavior: smooth
+    overflow-y: scroll
+    overflow-x: hidden
+    height: 100vh
+    .section
+        scroll-snap-align: center
+    .home
+        background: $black
+        height: 100vh
+        width: 100%
+        .content
+            background-image: url('../img/bg-home.png')
+            background-position: center bottom
+            background-size: cover
+            height: 100%
+            width: 100%
+            background-attachment: fixed
+            overflow: hidden
+            .lead
+                margin-top: 200px
+                h1
+                    color: $l-green
+    .description
+        background: $yellow
+        height: 100vh
+        .content
+            display: grid
+            grid-template-columns: 1fr 1fr
+            grid-gap: 30px
+            height: 100%
+            .right
+                display: flex
+                flex-direction: column
+                justify-content: space-between
+    .form
+        background: $purple
+        height: 100vh
+        .content
+            display: grid
+            grid-template-columns: 1fr 1fr
+            grid-gap: 30px
+            height: 100%
+            .left
+                display: flex
+                flex-direction: column
+                justify-content: space-between
+            .right
+                display: flex
+                flex-direction: column
+                justify-content: space-between
+                #timer
+                    display: flex
+                    flex-direction: row
+                    justify-content: space-between
+                    text-align: center
+                    span
+                        font-family: $st
+                        font-size: 14px
+                    div
+                        padding: 10px
+                        box-sizing: border-box
+                        cursor: pointer
+                        border-radius: 4px
+                        &:hover
+                            background: #adacdc
+                form
+                    fieldset
+                        border: none
+                        padding: 0
+                        margin: 0
+                        .field
+                            display: flex
+                            flex-direction: column
+                            margin-bottom: 10px
+                            label
+                                font-family: $st-m
+                                margin-bottom: 10px
+                                margin-top: 10px
+                            input
+                                border: solid 2px $black
+                                padding: 10px
+                                border-radius: 5px
+                                background: #adacdc
+                    input.send
+                        background: $black
+                        color: $white
+                        display: block
+                        width: 100%
+                        padding: 5px
+                        border: none
+    .footer
+        background: $orange
+        height: 100vh
+        .content
+            height: 100%
+            width: 100%
+            .left
+                width: 50%
+                height: 100%
+                float: left
+                display: flex
+                flex-direction: column
+                justify-content: space-between
+                a
+                    color: $black
+                    font-family: $bc
+                h2
+                    display: inline-block
+            .right
+                float: right
+                width: 50%
+                height: 100%
+                display: flex
+                flex-direction: column
+                justify-content: flex-end
+
+@media (max-width: 750px)
+    .home
+        height: auto !important
+        .content
+            background-position: center top
+            background-repeat: no-repeat !important
+            background-attachment: scroll !important
+            .lead
+                margin-top: 150px !important
+                h1
+                    color: $l-green
+    .description
+        height: auto !important
+        .content
+            grid-template-columns: 1fr !important
+            .right
+                img
+                    margin-top: 50px
+    .form
+        height: auto !important
+        .content
+            grid-template-columns: 1fr !important
+            height: 100%
+            .left
+                h2
+                    margin-bottom: 50px
+                p
+                    margin-bottom: 50px
+                img
+                    margin-bottom: 50px
+            .right
+                p
+                    margin-bottom: 50px
+                #timer
+                    margin-bottom: 50px
+    .footer
+        height: auto !important
+        .content
+            overflow: auto
+            .left
+                width: 100% !important
+                height: 100%
+                float: none !important
+                a
+                    color: $black
+                    font-family: $bc
+                h2
+                    display: inline-block
+                    margin-bottom: 50px
+                p
+                    margin-bottom: 50px
+            .right
+                float: none !important
+                width: 100% !important
+                height: 100%
+                display: flex
+                flex-direction: column
+                justify-content: flex-end
+    #home
+        scroll-snap-type: none
+        height: auto !important

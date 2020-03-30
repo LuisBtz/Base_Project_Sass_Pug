@@ -1,0 +1,26 @@
+#menu
+    position: fixed
+    left: 50%
+    transform: translateX(-50%)
+    top: 0
+    width: 100%
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+    .logo
+        width: 200px
+    .cta
+        margin-top: 10px
+        a
+            padding: 10px 25px
+            color: $green
+            background: $l-green
+            border-radius: 7px
+
+@media (max-width: 750px)
+    #menu
+        .logo
+            width: 100px
+        .cta
+            margin-top: 10px
+            a

@@ -10,6 +10,72 @@ html
     body
       .container#home
         include _partials/menu
-        .imagenes_grid
-          img(src="/img/avatar.svg" alt="avatar")
-        include _partials/footer
+        .home.section
+          .content
+            .lead
+              h1 Un hogar vale más que <br>mil metros cuadrados
+        .description.section
+          .content
+            .left
+              h2 Colonia se complace en anunciar su próximo inicio de preventa
+            .right
+              .text
+                p Un proyecto de usos mixtos que nacerá en la zona de Colón:  
+                p.bold Departamentos, Oﬁcinas & Locales comerciales
+                br
+                p Precios desde $1,900,000 pesos.
+                br
+                p.bold ¡Iniciamos preventa al público general en Mayo 2020!
+              img(src="/img/i-1.svg", alt="Somos Colonia")
+        .form.section
+          .content
+            .left
+              h2 Estaremos teniendo reuniones privadas con posibles inversionistas, previo al evento de Inicio de Preventa.
+              p El calendario de <span>reuniones preferenciales</span> concluye el 20 de Abril de 2020.
+              img(src="/img/i-3.svg", alt="Somos Colonia")
+            .right
+              p Obtén <span>acceso preferencial</span>, déjanos tus datos aún estas a tiempo... 
+              #timer
+                #timer-days
+                #timer-hours
+                #timer-mins
+                #timer-secs
+              <form id="fs-frm" name="simple-contact-form" accept-charset="utf-8" action="https://formspree.io/mzbvaygv" method="post">
+                <fieldset id="fs-frm-inputs">
+
+                  <div class="field">
+                    <label for="full-name">Nombre</label>
+                    <input type="text" name="name" id="full-name" required="">
+                  </div>
+                  
+                  <div class="field">
+                    <label for="email-address">Correo Electrónico</label>
+                    <input type="email" name="_replyto" id="email-address" required="">
+                  </div>
+
+                  <div class="field">
+                    <label for="whatsapp">Whatsapp</label>
+                    <input type="phone" name="_replyto" id="phone" required="">
+                  </div>
+
+                  <div class="field">
+                    <input type="radio" value="recibir"> Me interesa recibir información<br>
+                  </div>
+                  
+                </fieldset>
+
+                <input class="send" type="submit" value="Enviar">
+              </form>
+        .footer.section
+          .content
+            .left
+              .top
+                h2 Contáctanos:
+                h2
+                  a(href="hola@somoscolonia.mx") hola@somoscolonia.mx
+                h2 tel: (81)1492 4527
+              .bottom
+                p Un proyecto desarrollado por <span>Plate®</span>
+            .right
+              img(src="/img/i-2.svg", alt="Somos Colonia")
+        script(src="/js/script.js")
