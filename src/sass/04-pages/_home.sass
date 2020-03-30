@@ -11,13 +11,15 @@
         height: 100vh
         width: 100%
         .content
+            position: relative
             background-image: url('../img/bg-home.png')
-            background-position: center bottom
-            background-size: cover
+            background-position: center 90%
+            background-repeat: no-repeat
+            background-size: 80% 
             height: 100%
-            width: 100%
             background-attachment: fixed
             overflow: hidden
+            width: 100%
             .lead
                 margin-top: 200px
                 h1
@@ -30,6 +32,7 @@
             grid-template-columns: 1fr 1fr
             grid-gap: 30px
             height: 100%
+            padding-top: 100px
             .right
                 display: flex
                 flex-direction: column
@@ -42,10 +45,13 @@
             grid-template-columns: 1fr 1fr
             grid-gap: 30px
             height: 100%
+            padding-top: 100px
             .left
                 display: flex
                 flex-direction: column
                 justify-content: space-between
+                img
+                    width: 80%
             .right
                 display: flex
                 flex-direction: column
@@ -63,8 +69,22 @@
                         box-sizing: border-box
                         cursor: pointer
                         border-radius: 4px
-                        &:hover
+                        &:first-child
                             background: #adacdc
+                    .number
+                        display: flex
+                        flex-direction: row
+                        position: relative
+                        div
+                            padding: 0
+                            background: none
+                            padding-left: 20px
+                            display: block
+                            float: left
+                    .points
+                        padding: 0
+                        font-size: 3rem
+                        margin-top: 5px
                 form
                     fieldset
                         border: none
@@ -76,11 +96,12 @@
                             margin-bottom: 10px
                             label
                                 font-family: $st-m
+                                font-size: .9rem
                                 margin-bottom: 10px
                                 margin-top: 10px
                             input
                                 border: solid 2px $black
-                                padding: 10px
+                                padding: 5px 10px
                                 border-radius: 5px
                                 background: #adacdc
                     input.send
@@ -96,6 +117,7 @@
         .content
             height: 100%
             width: 100%
+            padding-top: 100px
             .left
                 width: 50%
                 height: 100%
@@ -118,13 +140,12 @@
 
 @media (max-width: 750px)
     .home
-        height: auto !important
         .content
             background-position: center top
             background-repeat: no-repeat !important
             background-attachment: scroll !important
             .lead
-                margin-top: 150px !important
+                margin-top: 100px !important
                 h1
                     color: $l-green
     .description
@@ -145,7 +166,7 @@
                 p
                     margin-bottom: 50px
                 img
-                    margin-bottom: 50px
+                    display: none
             .right
                 p
                     margin-bottom: 50px

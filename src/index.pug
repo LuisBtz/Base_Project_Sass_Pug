@@ -14,7 +14,7 @@ html
           .content
             .lead
               h1 Un hogar vale más que <br>mil metros cuadrados
-        .description.section
+        .description.section(data-midnight="black")
           .content
             .left
               h2 Colonia se complace en anunciar su próximo inicio de preventa
@@ -27,7 +27,7 @@ html
                 br
                 p.bold ¡Iniciamos preventa al público general en Mayo 2020!
               img(src="/img/i-1.svg", alt="Somos Colonia")
-        .form.section
+        .form.section(data-midnight="black")
           .content
             .left
               h2 Estaremos teniendo reuniones privadas con posibles inversionistas, previo al evento de Inicio de Preventa.
@@ -38,7 +38,9 @@ html
               #timer
                 #timer-days
                 #timer-hours
+                .points :
                 #timer-mins
+                .points :
                 #timer-secs
               <form id="fs-frm" name="simple-contact-form" accept-charset="utf-8" action="https://formspree.io/mzbvaygv" method="post">
                 <fieldset id="fs-frm-inputs">
@@ -66,14 +68,11 @@ html
 
                 <input class="send" type="submit" value="Enviar">
               </form>
-        .footer.section
+        .footer.section(data-midnight="black")
           .content
             .left
               .top
-                h2 Contáctanos:
-                h2
-                  a(href="hola@somoscolonia.mx") hola@somoscolonia.mx
-                h2 tel: (81)1492 4527
+                h2 Contáctanos: <br>hola@somoscolonia.mx <br> tel: (81)1492 4527                
               .bottom
                 p Un proyecto desarrollado por <span>Plate®</span>
             .right

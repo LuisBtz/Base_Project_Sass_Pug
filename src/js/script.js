@@ -6,7 +6,13 @@ $(function () {
 			position = target.offset().top;
 		$('body, html').animate({scrollTop: position}, 250, 'swing');
 		event.preventDefault();
-	});
+  });
+  
+
+
+
+    $('#menu').midnight();
+
 });
 
 

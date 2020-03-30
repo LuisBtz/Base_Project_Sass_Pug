@@ -1,16 +1,23 @@
 #menu
     position: fixed
-    left: 50%
-    transform: translateX(-50%)
-    top: 0
     width: 100%
     display: flex
     flex-direction: row
     justify-content: space-between
+    z-index: 1
+    .midnightInner
+        flex-direction: row
+        display: flex
+        justify-content: space-between
+        top: 50% !important
+        transform: translateY(-50%) !important
     .logo
-        width: 200px
+        margin-left: 20px
+        svg
+            width: 200px
     .cta
         margin-top: 10px
+        margin-right: 20px
         a
             padding: 10px 25px
             color: $green
@@ -20,7 +27,8 @@
 @media (max-width: 750px)
     #menu
         .logo
-            width: 100px
+            svg
+                width: 150px
         .cta
             margin-top: 10px
             a
